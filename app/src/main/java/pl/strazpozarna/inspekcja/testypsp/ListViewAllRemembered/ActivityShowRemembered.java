@@ -52,15 +52,11 @@ public class ActivityShowRemembered extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_questions);
-
-
     }
 
     @Override
     protected void onStart() {
-        rememberedQuestionsArrayList = new ArrayList<Question>();
-
-
+        rememberedQuestionsArrayList = new ArrayList<>();
 
         // Read from GSON
         SharedPreferences prefs = getSharedPreferences("QuestionKey", Context.MODE_PRIVATE);
@@ -68,7 +64,8 @@ public class ActivityShowRemembered extends AppCompatActivity {
         learnQuestionsArrayList = new Gson().fromJson(httpParamJSONList, new TypeToken<List<Question>>() {
         }.getType());
 
-        for (int i= learnQuestionsArrayList.size()-1; i>=0;i--){
+        assert learnQuestionsArrayList != null;
+        for (int i = learnQuestionsArrayList.size()-1; i>=0; i--){
             int indexRemembered =0;
             if(learnQuestionsArrayList.get(i).getStar()==1){
                 rememberedQuestionsArrayList.add(indexRemembered, new Question(learnQuestionsArrayList.get(i).getIndexGlobal(), learnQuestionsArrayList.get(i).getQuestion(), learnQuestionsArrayList.get(i).getAnswerA(), learnQuestionsArrayList.get(i).getAnswerB(), learnQuestionsArrayList.get(i).getAnswerC(), learnQuestionsArrayList.get(i).getAnswerD(), learnQuestionsArrayList.get(i).getCorrectAnswer(), learnQuestionsArrayList.get(i).getNotify(), learnQuestionsArrayList.get(i).getIndexLocal(), learnQuestionsArrayList.get(i).getStar()));
@@ -76,16 +73,11 @@ public class ActivityShowRemembered extends AppCompatActivity {
             }
         }
 
-
-
-
-
-
         // Create the adapter to convert the array to views
         showRememberedAdapter = new ShowRememberedAdapter(this, rememberedQuestionsArrayList);
 
         // Attach the adapter to a ListView
-        listView = (ListView) findViewById(R.id.activity_show_questions_listview_id);
+        listView = findViewById(R.id.activity_show_questions_listview_id);
         listView.setAdapter(showRememberedAdapter);
 
 
@@ -100,7 +92,6 @@ public class ActivityShowRemembered extends AppCompatActivity {
                 intent.putExtra("SwitchIntent", 3);
                 startActivity(intent);
 
-
             }
         });
 
@@ -109,7 +100,6 @@ public class ActivityShowRemembered extends AppCompatActivity {
 //        //Load position after destroy
         sharedpreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         int position = sharedpreferences.getInt("ListPositionRemembered", 0);
-
         listView.setSelectionFromTop(position, 0);
 
 
@@ -118,26 +108,12 @@ public class ActivityShowRemembered extends AppCompatActivity {
             listView.onRestoreInstanceState(state);
         }
 
-
         //Load query after come back from detail question
         //I found BUG in java here, I have to add space before queryText to work
         if (searchView != null) {
 
             queryText = String.valueOf(searchView.getQuery());
-
-//            if(String.valueOf(queryText).substring(0,1).equals(" ")) {
-//                Log.v("substrign1,2", queryText.substring(0,1));
-//                StringBuffer substract = new StringBuffer(queryText);
-//                Log.v("Substract", substract + "");
-//                substract.deleteCharAt(0);
-//                queryText = String.valueOf(substract);
-//                Log.v("After  substract", queryText);
-//
-//            }
-
-
             searchView.setQuery(" "+queryText, true);
-            Log.v("QueryTextSTARTTTTTTTTT", queryText + "");
 
         }
 
@@ -159,26 +135,17 @@ public class ActivityShowRemembered extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-
-
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String searchQuery) {
-
-
                 showRememberedAdapter.filter(searchQuery.trim());
-
                 listView.invalidate();
-
-
                 return true;
             }
 
-
         });
-
 
         return true;
     }
@@ -193,7 +160,6 @@ public class ActivityShowRemembered extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_search) {
-
             return true;
         }
         if (id ==R.id.action_reset){
@@ -207,25 +173,16 @@ public class ActivityShowRemembered extends AppCompatActivity {
             overridePendingTransition(0, 0);
             startActivity(getIntent());
             overridePendingTransition(0, 0);
-
-
         }
-
-
         return super.onOptionsItemSelected(item);
 
-
-
     }
-
 
     @Override
     public void onPause() {
 
         // Save ListView state after onPause
         state = listView.onSaveInstanceState();
-
-
         super.onPause();
     }
 
@@ -239,7 +196,6 @@ public class ActivityShowRemembered extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedpreferences.edit();
         editor.putInt("ListPositionRemembered", scrollPosition);
         editor.apply();
-
 
         super.onDestroy();
     }
