@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Straż Pożarna - Test Wiedzy</string>
     <string name="rozdzialy">Rozdziały</string>
     <string name="lista_pytan">Lista Pytań</string>
@@ -7,4 +7,12 @@
     <string name="aplikacja_info">Aplikacja powstała jako pomoc w opanowaniu zestawu pytań testowych wykorzystywanych w sprawdzianach wiedzy obsady podziału bojowego i stanowisk kierowania w trakcie inspekcji gotowości operacyjnej</string>
     <string name="lista_pytan_info">Lista pytań bazuje na zestawie udostępnionym przez Komendę Główną PSP w styczniu 2017 roku</string>
     <string name="lista_zmian">Lista Zmian</string>
+    <string name="ok" tools:ignore="ButtonCase,Typos">ok</string>
+    <string name="cancel" tools:ignore="ButtonCase">cancel</string>
+    <string name="show_notification">show_notification</string>
+    <string name="losuj_test">losuj test</string>
+    <string name="find">find</string>
+    <string name="reset_odpowiedzi">Reset odpowiedzi</string>
+    <string name="reset">reset</string>
+    <string name="zako_cz">Zakończ</string>
 </resources>

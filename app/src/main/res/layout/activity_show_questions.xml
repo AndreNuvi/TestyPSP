@@ -6,7 +6,6 @@
     tools:context="pl.strazpozarna.inspekcja.testypsp.ListViewAllStarQuestions.ActivityShowQuestions"
     android:orientation="vertical">
 
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

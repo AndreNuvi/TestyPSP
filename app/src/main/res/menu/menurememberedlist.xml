@@ -1,18 +1,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="pl.strazpozarna.inspekcja.testypsp.ListViewAllStarQuestions">
+    tools:context="pl.strazpozarna.inspekcja.testypsp.ListViewAllStarQuestions"
+    tools:ignore="MissingDefaultResource">
 
     <item
         android:id="@+id/action_search"
         android:icon="@android:drawable/ic_menu_search"
-        android:title="find"
+        android:title="@string/find"
         app:actionViewClass="android.support.v7.widget.SearchView"
-        app:showAsAction="collapseActionView|always"
+        app:showAsAction="collapseActionView|ifRoom"
         />
     <item
         android:id="@+id/action_reset"
-        android:title="Reset odpowiedzi"
+        android:title="@string/reset_odpowiedzi"
         app:showAsAction="never"
         />
 
