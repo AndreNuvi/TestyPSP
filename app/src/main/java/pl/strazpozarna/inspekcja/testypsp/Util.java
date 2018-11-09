@@ -9,14 +9,15 @@ import android.view.MenuItem;
 /**
  * Created by Andre on 2017-03-12.
  */
-public class Util {
+class Util {
 
 
-        public static void tintMenuIcon(Context context, MenuItem item, @ColorRes int color) {
+
+
+        static void tintMenuIcon(Context context, MenuItem item, @ColorRes int color) {
             Drawable normalDrawable = item.getIcon();
             Drawable wrapDrawable = DrawableCompat.wrap(normalDrawable);
             DrawableCompat.setTint(wrapDrawable, context.getResources().getColor(color));
-
             item.setIcon(wrapDrawable);
         }
 

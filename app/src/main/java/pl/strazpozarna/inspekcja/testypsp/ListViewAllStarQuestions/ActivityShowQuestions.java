@@ -43,18 +43,15 @@ public class ActivityShowQuestions extends AppCompatActivity {
     SearchView searchView;
     String queryText;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_questions);
 
-
     }
 
     @Override
     protected void onStart() {
-
 
         // Read from GSON
         SharedPreferences prefs = getSharedPreferences("QuestionKey", Context.MODE_PRIVATE);
@@ -62,34 +59,26 @@ public class ActivityShowQuestions extends AppCompatActivity {
         learnQuestionsArrayList = new Gson().fromJson(httpParamJSONList, new TypeToken<List<Question>>() {
         }.getType());
 
-
         // Create the adapter to convert the array to views
         showQuestionsAdapter = new ShowQuestionsAdapter(this, learnQuestionsArrayList);
 
         // Attach the adapter to a ListView
-        listView = (ListView) findViewById(R.id.activity_show_questions_listview_id);
+        listView =  findViewById(R.id.activity_show_questions_listview_id);
         listView.setAdapter(showQuestionsAdapter);
-
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 final Intent intent = new Intent(ActivityShowQuestions.this, ActivityQuestionsLearn.class);
-
                 intent.putExtra("IndexStart", learnQuestionsArrayList.get(position).getIndexGlobal() - 1);
                 intent.putExtra("IndexEnd", 998);
                 intent.putExtra("SwitchIntent", 2);
                 startActivity(intent);
 
-
             }
         });
 
         listView.setTextFilterEnabled(true);
-
-
-
 
 //        //Load position after destroy
         sharedpreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
@@ -97,30 +86,16 @@ public class ActivityShowQuestions extends AppCompatActivity {
 
         listView.setSelectionFromTop(position, 0);
 
-
 //        Load position list after onPause
         if (state != null) {
             listView.onRestoreInstanceState(state);
         }
-
 
         //Load query after come back from detail question
         //I found BUG in java here, I have to add space before queryText to work
         if (searchView != null) {
 
             queryText = String.valueOf(searchView.getQuery());
-
-//            if(String.valueOf(queryText).substring(0,1).equals(" ")) {
-//                Log.v("substrign1,2", queryText.substring(0,1));
-//                StringBuffer substract = new StringBuffer(queryText);
-//                Log.v("Substract", substract + "");
-//                substract.deleteCharAt(0);
-//                queryText = String.valueOf(substract);
-//                Log.v("After  substract", queryText);
-//
-//            }
-
-
             searchView.setQuery(" "+queryText, true);
             Log.v("QueryTextSTARTTTTTTTTT", queryText + "");
 
@@ -130,7 +105,6 @@ public class ActivityShowQuestions extends AppCompatActivity {
 
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -139,29 +113,21 @@ public class ActivityShowQuestions extends AppCompatActivity {
         searchItem = menu.findItem(R.id.action_search);
         searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setQueryHint("Szukaj wg frazy w pytaniu");
-
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String searchQuery) {
-
-
                 showQuestionsAdapter.filter(searchQuery.trim());
-
                 listView.invalidate();
 
                 return true;
             }
 
-
         });
-
 
         return true;
     }
@@ -179,7 +145,6 @@ public class ActivityShowQuestions extends AppCompatActivity {
             return true;
         }
 
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -190,7 +155,6 @@ public class ActivityShowQuestions extends AppCompatActivity {
         // Save ListView state after onPause
         state = listView.onSaveInstanceState();
 
-
         super.onPause();
     }
 
@@ -199,12 +163,10 @@ public class ActivityShowQuestions extends AppCompatActivity {
 
         //Save list position permanently after onDestroy
         scrollPosition = listView.getFirstVisiblePosition();
-
         sharedpreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedpreferences.edit();
         editor.putInt("ListPosition", scrollPosition);
         editor.apply();
-
 
         super.onDestroy();
     }

@@ -3,6 +3,7 @@ package pl.strazpozarna.inspekcja.testypsp.ListViewAllStarQuestions;
 import android.app.Activity;
 import android.content.Context;
 
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,13 +32,13 @@ public class ShowQuestionsAdapter extends ArrayAdapter<Question> {
 
 
     private Context context;
-    static List<Question> data;
-    static ArrayList<Question> arrayList;
+    private static List<Question> data;
+    private static ArrayList<Question> arrayList;
 
 
-    public ShowQuestionsAdapter(Context context, ArrayList<Question> data) {
+    ShowQuestionsAdapter(Context context, ArrayList<Question> data) {
         super(context, R.layout.questions_item_all);
-        this.data = data;
+        ShowQuestionsAdapter.data = data;
         this.context = context;
         arrayList = new ArrayList<>();
         arrayList.addAll(data);
@@ -49,11 +50,12 @@ public class ShowQuestionsAdapter extends ArrayAdapter<Question> {
     }
 
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
 
         View row = convertView;
-        QuestionHolder holder = null;
+        QuestionHolder holder;
 
 
         // Check if an existing view is being reused, otherwise inflate the view
@@ -63,9 +65,9 @@ public class ShowQuestionsAdapter extends ArrayAdapter<Question> {
 
             // Lookup view for data population
             holder = new QuestionHolder();
-            holder.number = (TextView) row.findViewById(R.id.questions_item_all_NumberId);
-            holder.itemQuestion = (TextView) row.findViewById(R.id.questions_item_all_QuestionId);
-            holder.starList = (ImageView) row.findViewById(starList);
+            holder.number = row.findViewById(R.id.questions_item_all_NumberId);
+            holder.itemQuestion = row.findViewById(R.id.questions_item_all_QuestionId);
+            holder.starList = row.findViewById(starList);
             row.setTag(holder);
         } else {
             holder = (QuestionHolder) row.getTag();
@@ -96,7 +98,6 @@ public class ShowQuestionsAdapter extends ArrayAdapter<Question> {
         holder.itemQuestion.setText(question.getQuestion());
         holder.number.setText(String.valueOf(question.getIndexGlobal()));
 
-
         return row;
 
     }
@@ -108,7 +109,7 @@ public class ShowQuestionsAdapter extends ArrayAdapter<Question> {
     }
 
 
-    public void filter(String charText) {
+    void filter(String charText) {
 
 
         charText = charText.toLowerCase(Locale.getDefault());
@@ -119,7 +120,7 @@ public class ShowQuestionsAdapter extends ArrayAdapter<Question> {
             data.addAll(arrayList);
         } else {
             for (Question questionDetails : arrayList) {
-                if (charText.length() != 0 && questionDetails.getQuestion().toLowerCase(Locale.getDefault()).contains(charText)) {
+                if (questionDetails.getQuestion().toLowerCase(Locale.getDefault()).contains(charText)) {
                     data.add(questionDetails);
                 }
             }

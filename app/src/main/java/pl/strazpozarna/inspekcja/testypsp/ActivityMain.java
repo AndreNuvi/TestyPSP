@@ -68,22 +68,16 @@ public class ActivityMain extends AppCompatActivity {
     // needed to close this activity from settingsActivity when press save
     public static Activity mainActivity;
 
-
     private static final String TAG = "MainActivity";
 
-
     private Calendar alarmStartTime = new GregorianCalendar();
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.appmenu, menu);
 
 
-
-
-
-        //You have to change keys  in 4 places after update
+        //TODO You have to change keys  in 4 places after update
 
         //Check if app is first run after update
         SharedPreferences readFirstRun2 = getSharedPreferences("isFirstRunKey8", MODE_PRIVATE);
@@ -418,7 +412,7 @@ public class ActivityMain extends AppCompatActivity {
 
         } else if (progress == digits[18]) {
             setResources(stopnie[19], srce[19], srce2[19]);
-            profile = (ProgressProfileView) findViewById(R.id.profile);
+            profile = findViewById(R.id.profile);
             profile.setImageResource(R.drawable.sam);
         }
 
@@ -426,9 +420,9 @@ public class ActivityMain extends AppCompatActivity {
 
     private void setResources(String stopien, int src, int src2) {
 
-        TextView grade = (TextView) findViewById(R.id.grade);
-        ImageView grade1 = (ImageView) findViewById(R.id.grade1);
-        ImageView grade2 = (ImageView) findViewById(R.id.grade2);
+        TextView grade = findViewById(R.id.grade);
+        ImageView grade1 =  findViewById(R.id.grade1);
+        ImageView grade2 = findViewById(R.id.grade2);
 
         grade.setText(stopien);
         grade1.setImageResource(src2);

@@ -118,7 +118,6 @@ public class ShowRememberedAdapter extends ArrayAdapter<Question> {
             data.addAll(arrayList);
         } else {
             for (Question questionDetails : arrayList) {
-                //charText.length();
                 if (questionDetails.getQuestion().toLowerCase(Locale.getDefault()).contains(charText)) {
                     data.add(questionDetails);
                 }
