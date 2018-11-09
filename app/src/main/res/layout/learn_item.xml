@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="3dp">
+
+        <LinearLayout
+            android:id="@+id/itemChapterClick"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/chapterItemId"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:background="@color/colorPrimaryLight"
+                android:gravity="center"
+                android:paddingStart="3dp"
+                android:text="XIV."
+                android:textSize="20sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/titleChapterItemid"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="6.5"
+                android:background="@color/colorPrimaryLight"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:text="Bezpieczeństwo budynków gospodarczy i innych maszyn rolniczych dla jednostek podstawowych"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:textStyle="normal|bold" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/infoLinear"
+                android:layout_weight="2"
+                android:background="@color/colorPrimaryLight"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_pound_black_18dp"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/goodItemId"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="145"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_check_black_18dp"
+                        android:tint="@color/colorGreen" />
+
+                    <TextView
+                        android:id="@+id/wrongItemId"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="120"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_star_black_18dp"
+                        android:tint="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/totalItemId"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="2"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/colorPrimaryLight"
+            android:orientation="horizontal">
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="9"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:rcBackgroundColor="@color/colorPrimary"
+                app:rcBackgroundPadding="4dp"
+                app:rcMax="15"
+                app:rcProgress="5"
+                app:rcProgressColor="@color/colorPrimaryDark"
+                app:rcRadius="10dp"
+                app:rcReverse="false"
+                app:rcSecondaryProgress="9.2"
+                app:rcSecondaryProgressColor="@color/colorGreen" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

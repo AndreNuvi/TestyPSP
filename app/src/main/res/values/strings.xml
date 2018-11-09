@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Straż Pożarna - Test Wiedzy</string>
+    <string name="title_activity_questions">ActivityQuestions</string>
+    <string name="title_activity_test">test</string>
+    <string name="banner_ad_unit_id">ca-app-pub-4844192903995686/1857365056</string>
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+</resources>

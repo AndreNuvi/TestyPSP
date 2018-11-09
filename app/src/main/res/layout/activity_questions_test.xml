@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test_panel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pl.strazpozarna.inspekcja.testypsp.ActivityQuestionsTest">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:weightSum="8">
+
+            <LinearLayout
+                android:id="@+id/chapterMessageId"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.5">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_book_open_black_18dp"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/questionChapterId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="IV"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dispayQuestionCounterId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.5"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_playlist_check_black_18dp"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/questionTestCounterID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="2dp"
+                    android:gravity="center"
+                    android:text="32/180"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/counterId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_check_black_18dp"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/questionTestGoodId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_close_black_18dp"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/questionTestbadID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/flagQuestionId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_star_black_18dp"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/questionTestScoreFlagId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="2sp"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="2sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/questionId"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorPrimaryLight"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:text="Wskaż nieprawidłową wane w strefach wanych do kategorii zagrożenia ludzi ZL:" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/viewAId"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorDividerTExt"
+                        android:elevation="3dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/answerAId"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorPrimaryLight"
+                        android:elevation="3dp"
+                        android:gravity="center"
+                        android:text="na każdej kondygnacji budynku wysokiego i wysokościowego, z wyjątkiem kondygnacji obejmującej wyłącznie strefę pożarową zakwalifikowaną do kategorii zagrożenia ludzi ZL IV" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/viewBId"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorDividerTExt"
+                        android:elevation="3dp" />
+
+                    <TextView
+                        android:id="@+id/answerBId"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorPrimaryLight"
+                        android:elevation="3dp"
+                        android:gravity="center"
+                        android:text="garażu zamkniętym o więcej niż 10 stanowiskach postojowych" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/viewCId"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorDividerTExt"
+                        android:elevation="3dp" />
+
+                    <TextView
+                        android:id="@+id/answerCId"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorPrimaryLight"
+                        android:elevation="3dp"
+                        android:gravity="center"
+
+                        android:text="w strefie pożarowej zakwalifikowanej do kategorii zagrożenia ludzi ZL III o powierzchni przekraczającej 200 m2 w budynku średniowysokim i przekraczającej 1000 m2 w budynku niskim" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:weightSum="8">
+
+
+            <ImageButton
+                android:id="@+id/prevButtonId"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_weight="3"
+                android:elevation="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/chevron_left"
+                android:tint="@color/colorPrimaryDark" />
+
+            <ImageButton
+                android:id="@+id/imageButtonId"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:elevation="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_star_outline_black_48dp"
+                android:tint="@color/colorPrimaryDark" />
+
+
+            <ImageButton
+                android:id="@+id/nextButtonId"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="-10dp"
+                android:layout_weight="3"
+                android:elevation="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/chevron_right"
+                android:tint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
