@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.android.testypsp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="false"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        android:theme="@style/AppTheme">
         <activity
             android:name="pl.strazpozarna.inspekcja.testypsp.ActivityMain"
             android:screenOrientation="portrait">
@@ -28,13 +26,11 @@
         <activity
             android:name="pl.strazpozarna.inspekcja.testypsp.ListViewAllStarQuestions.ActivityShowQuestions"
             android:label="Lista Pytań"
-            android:screenOrientation="portrait"
-            tools:ignore="InnerclassSeparator" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="pl.strazpozarna.inspekcja.testypsp.ListViewChapters.ActivityChapters"
             android:label="Rozdziały"
-            android:screenOrientation="portrait"
-            tools:ignore="InnerclassSeparator" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="pl.strazpozarna.inspekcja.testypsp.ActivityQuestionsTest"
             android:label="Test Wiedzy"
@@ -50,12 +46,11 @@
         <activity
             android:name="pl.strazpozarna.inspekcja.testypsp.ListViewAllRemembered.ActivityShowRemembered"
             android:label="Zapamiętane"
-            android:screenOrientation="portrait"
-            tools:ignore="InnerclassSeparator" />
+            android:screenOrientation="portrait" />
 
         <receiver android:name="pl.strazpozarna.inspekcja.testypsp.NotificationPublisher" />
 
-        <activity android:name="pl.strazpozarna.inspekcja.testypsp.ActivitySettingTest" />
+        <activity android:name="pl.strazpozarna.inspekcja.testypsp.ActivitySettingTest"></activity>
     </application>
 
 </manifest>
