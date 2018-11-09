@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -17,7 +15,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="55dp">
+        android:layout_marginBottom="55dp"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,7 +42,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/aspirant_left" />
+                    android:src="@drawable/aspirant_left"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/grade"
@@ -54,7 +54,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="center"
-                    android:text="STARSZY KAPITAN"
+                    tools:text="STARSZY KAPITAN"
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
@@ -65,7 +65,8 @@
                     android:layout_weight="1"
                     android:alpha="0.8"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/aspirant_right" />
+                    android:src="@drawable/aspirant_right"
+                    tools:ignore="ContentDescription" />
             </LinearLayout>
 
             <com.kuassivi.view.ProgressProfileView
@@ -92,25 +93,25 @@
                 android:id="@+id/buttonChapters"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rozdziały" />
+                android:text="@string/rozdzialy" />
 
             <Button
                 android:id="@+id/buttonFullList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lista Pytań" />
+                android:text="@string/lista_pytan" />
 
             <Button
                 android:id="@+id/buttonRememberedList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Zapamiętane Pytania" />
+                android:text="@string/zapamietane_pytania" />
 
             <Button
                 android:id="@+id/buttonCustomTestId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TEST" />
+                android:text="@string/test" />
 
 
         </LinearLayout>

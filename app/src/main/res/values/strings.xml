@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Straż Pożarna - Test Wiedzy</string>
-    <string name="title_activity_questions">ActivityQuestions</string>
-    <string name="title_activity_test">test</string>
-    <string name="banner_ad_unit_id">ca-app-pub-4844192903995686/1857365056</string>
-    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="rozdzialy">Rozdziały</string>
+    <string name="lista_pytan">Lista Pytań</string>
+    <string name="zapamietane_pytania">Zapamiętane Pytania</string>
+    <string name="test">TEST</string>
+    <string name="aplikacja_info">Aplikacja powstała jako pomoc w opanowaniu zestawu pytań testowych wykorzystywanych w sprawdzianach wiedzy obsady podziału bojowego i stanowisk kierowania w trakcie inspekcji gotowości operacyjnej</string>
+    <string name="lista_pytan_info">Lista pytań bazuje na zestawie udostępnionym przez Komendę Główną PSP w styczniu 2017 roku</string>
+    <string name="lista_zmian">Lista Zmian</string>
 </resources>

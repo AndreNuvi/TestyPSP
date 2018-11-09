@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_info"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -16,7 +15,8 @@
         android:paddingBottom="10dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,204 +28,186 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:text="Aplikacja powstała jako pomoc w opanowaniu zestawu pytań testowych wykorzystywanych w sprawdzianach wiedzy obsady podziału bojowego i stanowisk kierowania w trakcie inspekcji gotowości operacyjnej"
+                android:text="@string/aplikacja_info"
                 android:textAlignment="center"
                 android:textSize="14sp" />
-
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="Lista pytań bazuje na zestawie udostępnionym przez Komendę Główną PSP w styczniu 2017 roku"
+                android:text="@string/lista_pytan_info"
                 android:textAlignment="center" />
-
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:gravity="center"
-                android:text="Lista Zmian"
+                android:text="@string/lista_zmian"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:gravity="center"-->
-                <!--android:text="Całkowity czas opacowania aplikacji: 95 godzin" />-->
-
             <TextView
-                android:id="@+id/textView23"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="19.12.2017: "
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Usunięto baner" />
-
-
+                android:text="- Usunięto baner"
+                tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="05.05.2017: "
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Dodano liniowe paski postępu w rozdziałach" />
+                android:text="- Dodano liniowe paski postępu w rozdziałach"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Dodano kołowy pasek postępu w menu głównym" />
+                android:text="- Dodano kołowy pasek postępu w menu głównym"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Dodano rangi (stopnie) za postępy" />
+                android:text="- Dodano rangi (stopnie) za postępy"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Poprawiono pytania: 120, 157, 159, 163, 484" />
+                android:text="- Poprawiono pytania: 120, 157, 159, 163, 484"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Zablokowano ekran aplikacji na widok pionowy" />
+                android:text="- Zablokowano ekran aplikacji na widok pionowy"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Dodano obsługę androida od wersji 4.0 Ice Cream Sandwich" />
+                android:text="- Dodano obsługę androida od wersji 4.0 Ice Cream Sandwich"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Dodano możliwość przesuwania odpowiedzi na małych ekranach" />
-
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:text="- Czas opracowania 15 godzin" />-->
-
+                android:text="- Dodano możliwość przesuwania odpowiedzi na małych ekranach"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="29.03.2017: "
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="- Dodany reset odpowiedzi w pojedyńczej karcie pytania" />
+                android:text="- Dodany reset odpowiedzi w pojedyńczej karcie pytania"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Dodany reset grupowy w liście zapamiętanych pytań" />
+                android:text="- Dodany reset grupowy w liście zapamiętanych pytań"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Nawigacja przeniesiona na stronę startową" />
+                android:text="- Nawigacja przeniesiona na stronę startową"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Dodany pasek reklamy na stronie startowej" />
+                android:text="- Dodany pasek reklamy na stronie startowej"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Zmienione logo" />
-
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:text="- Czas opracowania 15 godzin" />-->
-
+                android:text="- Zmienione logo"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="12.03.2017: "
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="- Dodano wyszukiwarkę pytań" />
+                android:text="- Dodano wyszukiwarkę pytań"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Dodano listę zapamiętanych pytań" />
+                android:text="- Dodano listę zapamiętanych pytań"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="- Poprawione kilka błędów w pytaniach" />
-
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:text="- Czas opracowania 10 godzin" />-->
+                android:text="- Poprawione kilka błędów w pytaniach"
+                tools:ignore="HardcodedText"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="02.03.2017: "
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="- Publikacja" />
-
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:text="- Czas opracowania 50 godzin" />-->
-
+                android:text="- Publikacja"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
     </ScrollView>

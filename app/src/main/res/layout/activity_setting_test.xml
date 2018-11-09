@@ -7,14 +7,7 @@
     android:orientation="vertical"
     tools:context="pl.strazpozarna.inspekcja.testypsp.ActivityQuestionsTest">
 
-    <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="16dp"-->
-        <!--android:src="@drawable/" />-->
-
     <TextView
-        android:id="@+id/header1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -22,7 +15,6 @@
         android:textSize="42sp" />
 
     <TextView
-        android:id="@+id/header2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-15dp"
@@ -80,7 +72,6 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:id="@+id/layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/time_edit_text_view"

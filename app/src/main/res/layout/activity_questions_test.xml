@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_test_panel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -20,10 +19,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
             android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
             android:orientation="horizontal"
-            android:weightSum="8">
+            android:weightSum="8"
+            tools:ignore="DisableBaselineAlignment">
 
             <LinearLayout
                 android:id="@+id/chapterMessageId"
@@ -38,17 +38,19 @@
                     android:layout_gravity="center"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_book_open_black_18dp"
-                    android:tint="@color/colorPrimary" />
+                    android:tint="@color/colorPrimary"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/questionChapterId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
-                    android:text="IV"
+                    android:layout_marginLeft="2dp"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="2dp" />
+                    tools:ignore="RtlHardcoded"
+                    tools:text="IV" />
             </LinearLayout>
 
             <LinearLayout
@@ -65,7 +67,8 @@
                     android:layout_gravity="center"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_playlist_check_black_18dp"
-                    android:tint="@color/colorPrimary" />
+                    android:tint="@color/colorPrimary"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/questionTestCounterID"
@@ -73,11 +76,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
                     android:gravity="center"
-                    android:text="32/180"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="2dp" />
+                    tools:ignore="RtlHardcoded"
+                    tools:text="32/180" />
             </LinearLayout>
 
             <LinearLayout
@@ -94,16 +98,17 @@
                     android:layout_gravity="center"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_check_black_18dp"
-                    android:tint="@color/colorPrimary" />
+                    android:tint="@color/colorPrimary"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/questionTestGoodId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="0"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="0" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -111,16 +116,17 @@
                     android:layout_gravity="center"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_close_black_18dp"
-                    android:tint="@color/colorPrimary" />
+                    android:tint="@color/colorPrimary"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/questionTestbadID"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="0"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="0" />
             </LinearLayout>
 
 
@@ -129,7 +135,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"
-                android:gravity="right">
+                android:gravity="right"
+                tools:ignore="RtlHardcoded">
 
 
                 <ImageView
@@ -138,7 +145,8 @@
                     android:layout_gravity="center"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_star_black_18dp"
-                    android:tint="@color/colorPrimary" />
+                    android:tint="@color/colorPrimary"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/questionTestScoreFlagId"
@@ -146,10 +154,11 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="2sp"
-                    android:text="0"
+                    android:layout_marginLeft="2sp"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="2sp" />
+                    tools:ignore="RtlHardcoded"
+                    tools:text="0" />
             </LinearLayout>
 
         </LinearLayout>
@@ -163,7 +172,7 @@
             android:background="@color/colorPrimaryLight"
             android:elevation="5dp"
             android:gravity="center"
-            android:text="Wskaż nieprawidłową wane w strefach wanych do kategorii zagrożenia ludzi ZL:" />
+            tools:text="Wskaż nieprawidłową wane w strefach wanych do kategorii zagrożenia ludzi ZL:" />
 
 
         <ScrollView
@@ -198,7 +207,7 @@
                         android:background="@color/colorPrimaryLight"
                         android:elevation="3dp"
                         android:gravity="center"
-                        android:text="na każdej kondygnacji budynku wysokiego i wysokościowego, z wyjątkiem kondygnacji obejmującej wyłącznie strefę pożarową zakwalifikowaną do kategorii zagrożenia ludzi ZL IV" />
+                        tools:text="na każdej kondygnacji budynku wysokiego i wysokościowego, z wyjątkiem kondygnacji obejmującej wyłącznie strefę pożarową zakwalifikowaną do kategorii zagrożenia ludzi ZL IV" />
 
 
                 </LinearLayout>
@@ -224,7 +233,7 @@
                         android:background="@color/colorPrimaryLight"
                         android:elevation="3dp"
                         android:gravity="center"
-                        android:text="garażu zamkniętym o więcej niż 10 stanowiskach postojowych" />
+                        tools:text="garażu zamkniętym o więcej niż 10 stanowiskach postojowych" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -248,8 +257,7 @@
                         android:background="@color/colorPrimaryLight"
                         android:elevation="3dp"
                         android:gravity="center"
-
-                        android:text="w strefie pożarowej zakwalifikowanej do kategorii zagrożenia ludzi ZL III o powierzchni przekraczającej 200 m2 w budynku średniowysokim i przekraczającej 1000 m2 w budynku niskim" />
+                        tools:text="w strefie pożarowej zakwalifikowanej do kategorii zagrożenia ludzi ZL III o powierzchni przekraczającej 200 m2 w budynku średniowysokim i przekraczającej 1000 m2 w budynku niskim" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -259,10 +267,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        android:layout_alignParentLeft="true">
+        tools:ignore="RtlHardcoded">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -270,19 +279,21 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
-            android:weightSum="8">
+            android:weightSum="8"
+            tools:ignore="UselessParent">
 
 
             <ImageButton
                 android:id="@+id/prevButtonId"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:layout_marginLeft="-10dp"
+                android:layout_marginStart="-10dp"
                 android:layout_weight="3"
                 android:elevation="3dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/chevron_left"
-                android:tint="@color/colorPrimaryDark" />
+                android:tint="@color/colorPrimaryDark"
+                tools:ignore="ContentDescription" />
 
             <ImageButton
                 android:id="@+id/imageButtonId"
@@ -292,19 +303,21 @@
                 android:elevation="3dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_star_outline_black_48dp"
-                android:tint="@color/colorPrimaryDark" />
+                android:tint="@color/colorPrimaryDark"
+                tools:ignore="ContentDescription" />
 
 
             <ImageButton
                 android:id="@+id/nextButtonId"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:layout_marginRight="-10dp"
+                android:layout_marginEnd="-10dp"
                 android:layout_weight="3"
                 android:elevation="3dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/chevron_right"
-                android:tint="@color/colorPrimaryDark" />
+                android:tint="@color/colorPrimaryDark"
+                tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
